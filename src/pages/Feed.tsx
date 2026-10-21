@@ -12,7 +12,6 @@ export default function Feed() {
     data: posts = [],
     isLoading,
     isFetching,
-    refetch,
   } = useQuery({
     queryKey: ["posts"],
     queryFn: postsService.getAllPosts,
@@ -27,7 +26,7 @@ export default function Feed() {
   });
 
   async function deletePost(postId: string) {
-    const response = await postsService.deletePost(postId);
+     await postsService.deletePost(postId);
     queryClient.invalidateQueries({
       queryKey: ["posts"],
     });

@@ -45,7 +45,7 @@ export default function Post({
     setIsLoading(true);
     const formData = new FormData();
     formData.set("content", commentContent);
-    const response = await createComment(post!._id, formData);
+    await createComment(post!._id, formData);
     setIsLoading(false);
     setCommentContent("");
   }

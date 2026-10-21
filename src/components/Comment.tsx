@@ -3,7 +3,6 @@ import type { CommentI } from "../interfaces/commentI";
 import { useContext, useState } from "react";
 import { authContext } from "../contexts/authContext";
 import { Button, Input } from "@heroui/react";
-import commentsServices from "../services/commentsService";
 import type { CreateCommentResponse } from "../types/response";
 
 export default function Comment({

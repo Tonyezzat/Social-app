@@ -23,7 +23,7 @@ export default function PostDetails() {
         getPostComments();
         setIsLoading(false);
       })
-      .catch((err) => {
+      .catch(() => {
         setIsLoading(false);
         setNotFound(true);
       });
@@ -43,6 +43,8 @@ export default function PostDetails() {
     navigate("/", {
       replace: true,
     });
+    console.log(response);
+    
   }
 
   async function createComment(postId: string, formData: FormData) {

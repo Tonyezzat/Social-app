@@ -1,6 +1,6 @@
 import { Alert, Button, Input } from "@heroui/react";
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { getInputProps } from "../utils/helpers";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useContext, useState } from "react";
@@ -13,7 +13,7 @@ export default function SignIn() {
   const [successMsg, setSuccessMsg] = useState("");
   const [errMsg, setErrMsg] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const { setIsLoggedIn } = useContext(authContext);
 
